@@ -99,9 +99,13 @@ table {
  		clear=true;
  	}
  	function Raiz() {
- 		 
+ 		 if(document.calculadora.caja.value==""){
+ 			alert("No hay datos ingresados")
+ 		}
+ 		else{
  		 resul = Math.sqrt(document.calculadora.caja.value)
          document.calculadora.caja.value= resul;
+     }
  		
  	}
  	function resultado(){
