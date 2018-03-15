@@ -87,7 +87,7 @@ table {
 	</table>
 </form>
  <script type="text/javascript">
- 	var resul;
+ 	var resul=".";
  	var memoriaa;
  	var clear = true;
  	function numeros( num ){
@@ -105,21 +105,32 @@ table {
  		
  	}
  	function resultado(){
+ 		if(document.calculadora.caja.value==""){
+ 			alert("No hay datos ingresados")
+ 		}
+ 		else{
  		resul = eval(document.calculadora.caja.value);
  		document.calculadora.caja.value= resul;
  		if(document.calculadora.caja.value=="Infinity"){
  			document.calculadora.caja.value="";
  			alert("No se puede dividir entre 0")
  		}
- 		clear=false;
+ 		clear=false;	
  	}
+ 	}
+
  	function borrar(){
  		document.calculadora.caja.value="";	
  	}
  	function memoria(){
- 		memoriaa = resul;
+ 		if(resul=="."){
+ 			alert("No hay ningun valor en memoria")
+ 		}
+ 		else{
+ 			memoriaa = resul;
  		var mdc = document.calculadora.caja.value;
- 		document.calculadora.caja.value= mdc + memoriaa; 
+ 		document.calculadora.caja.value= mdc + memoriaa; 	
+ 		}
  	}
  </script>
 </body>
