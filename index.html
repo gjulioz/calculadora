@@ -93,7 +93,7 @@ table {
  	var memoriaa;
  	var clear = true;
  	function numeros( num ){
- 		if(clear==false){
+ 		if(clear==false && num !="+" && num !="-" && num !="*" && num !="/" && num !="**" && num !="√"){
  			borrar();
  		}
  		var mdc = document.calculadora.caja.value;
