@@ -24,6 +24,8 @@ table {
         text-align: right;
         font: 20px bold;
         color: black;
+        width: auto;
+        height: auto;
     }
     #ey
     {
@@ -103,8 +105,14 @@ table {
  			alert("No hay datos ingresados")
  		}
  		else{
- 		 resul = Math.sqrt(document.calculadora.caja.value)
-         document.calculadora.caja.value= resul;
+ 		 if(document.calculadora.caja.value<0){
+ 		 	alert("No existe la raiz de numeros negativos")	
+ 		 	borrar();
+ 		 }else{
+ 		 	resul = Math.sqrt(document.calculadora.caja.value)
+         	document.calculadora.caja.value= resul;	
+ 		 }
+ 		 
      }
  		
  	}
