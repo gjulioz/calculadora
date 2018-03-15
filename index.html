@@ -89,9 +89,14 @@ table {
  <script type="text/javascript">
  	var resul;
  	var memoriaa;
+ 	var clear = true;
  	function numeros( num ){
+ 		if(clear==false){
+ 			borrar();
+ 		}
  		var mdc = document.calculadora.caja.value;
  		document.calculadora.caja.value= mdc + num;
+ 		clear=true;
  	}
  	function Raiz() {
  		 
@@ -106,6 +111,7 @@ table {
  			document.calculadora.caja.value="";
  			alert("No se puede dividir entre 0")
  		}
+ 		clear=false;
  	}
  	function borrar(){
  		document.calculadora.caja.value="";	
